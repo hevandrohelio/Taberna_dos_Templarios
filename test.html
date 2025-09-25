@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagem seguindo o mouse</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+    }
+
+    #imagem {
+      position: absolute;
+      width: 50px; /* Ajuste o tamanho */
+      pointer-events: none; /* Para não atrapalhar cliques */
+    }
+  </style>
+</head>
+<body>
+  <img id="imagem" src="data/img/angel-no_back.png" alt="imagem">
+<section>
+    <h1>Taberna dos Templários</h1>
+        <article>
+            <div></div>
+            <div></div>
+            <div></div>
+        </article>
+    </section>
+  <script>
+    const img = document.getElementById("imagem");
+
+    document.addEventListener("mousemove", (event) => {
+      const offsetY = -30; // deslocamento para ficar acima do cursor
+      img.style.left = event.pageX + "px";
+      img.style.top = (event.pageY + offsetY) + "px";
+    });
+  </script>
+</body>
+</html>

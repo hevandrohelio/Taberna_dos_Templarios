@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/* Variáveis */
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Kings&family=Pirata+One&display=swap');
+
+/* Reset */
+body {
+    margin: 0;
+    background-image: url("data/img/cave_background.gif");
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#imagem,
+#video {
+    position: fixed;
+    width: 50px;
+    pointer-events: none;
+}
+
+/* Estilos básicos */
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+}
+
+* {
+    font-family: serif;
+}
+
+.title_back {
+    display: inline-flex;
+    align-items: center;
+
+    justify-content: center;
+    /*   background-image: url("data/img/dark_wood.jpg"); */
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    padding: 0px 20px;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-family: 'Jacquard 12';
+    text-align: center;
+    background: url("data/img/dark_wood.jpg");
+    font-size: 72px;
+    padding: 10px;
+}
+
+ul {
+    padding: 0px 40px 0px 0px;
+}
+
+li.av {
+    list-style-type: "✅";
+}
+
+li.un {
+    list-style-type: "❌";
+}
+
+button {
+    color: white;
+    font-size: 24px;
+    font-family: 'Pirata One', serif;
+    background-image: url("data/img/brick-wall-background-texture.jpg");
+    height: 50px;
+    width: 150px;
+    border: 5px gold solid;
+    margin: 5px;
+    transition: width 1s, height 1s, border 100ms;
+}
+
+button:hover {
+    height: 60px;
+    width: 160px;
+    border: 5px silver solid;
+}
+
+button:active {
+    border: 5px #303030 solid;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 300px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.card>div>img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.card>div>p {
+    text-align: center;
+}
+
+.card>h2 {
+    margin-top: 10px;
+    font-size: 42px;
+    font-family: 'Kings', serif;
+}
+
+
+.bronze {
+    background-color: #1b0b00;
+    border: 3px solid #943b00;
+}
+
+.silver {
+    background-color: #161616;
+    border: 3px solid silver;
+}
+
+.gold {
+    background-color: #2a1f05;
+    border: 3px solid goldenrod;
+}
+
+/* Mobile */
+@media screen and (max-width: 970px) {
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card>div>img {
+        margin-right: 30px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .img_price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 300px;
+        height: 370px;
+        border-radius: 30px;
+    }
+
+    .card>h2 {
+        margin: 5px;
+    }
+
+    .title_back {
+        margin-bottom: 100px;
+    }
+
+
+
+    h1 {
+        margin-top: 100px;
+        color: white;
+        font-family: 'Jacquard 12';
+        text-align: center;
+        background: url("data/img/dark_wood.jpg");
+        font-size: 64px;
+        padding: 10px;
+    }
+}
+
+
+/* Outros tamanhos */
